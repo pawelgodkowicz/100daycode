@@ -1,5 +1,5 @@
 <application>
   <component name="Git.Application.Settings">
-    <option name="myPathToGit" value="https://github.com/pawelgodkowicz/multilabel_classifiacation.git" />
+    <option name="myPathToGit" value="git@github.com:pawelgodkowicz/multi_label_classification.git" />
   </component>
 </application>
