@@ -1,1 +1,1 @@
-100daycode
+Some code exercises
