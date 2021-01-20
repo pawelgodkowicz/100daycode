@@ -1,5 +1,5 @@
 # 100 day of code
-## Tech
+## Workshop
 - Python3.8
 ## Mini projects
 - Blind auction
@@ -13,3 +13,4 @@
 - Self drawing Hirst picture
 - Turtle Race
 - Snake OOP
+- Pong Game
