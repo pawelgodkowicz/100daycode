@@ -9,7 +9,6 @@ img = "gifrab.gif"
 
 screen = Screen()
 screen.setup(width=600, height=600)
-screen.addshape(img)
 screen.bgcolor('black')
 screen.title("Jungle Python")
 screen.tracer(0)
@@ -39,13 +38,14 @@ while game_is_on:
 
     # wall colision detection
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        game_is_on = False
-        scoreboard.gameover()
-
+        scoreboard.reset_the_scoreboard()
+        snake.reset()
     # tail colision detection
     for segment in snake.segments[1:]:
-        if snake.head.distance(segment) < 10:
-            game_is_on = False
-            scoreboard.gameover()
+        if segment == snake.head:
+            pass
+        elif snake.head.distance(segment) < 10:
+            scoreboard.reset_the_scoreboard()
+            snake.reset()
 
 screen.exitonclick()
