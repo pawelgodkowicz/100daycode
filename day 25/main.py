@@ -28,10 +28,7 @@ while len(correct_states) < 50:
     answer_state = screen.textinput(title=f"{len(correct_states)}/50 State Correct",
                                     prompt="What's a another state's name?").title()
     if answer_state == 'Exit':
-        missing_states = []
-        for state in all_states:
-            if state not in correct_states:
-                missing_states.append(state)
+        missing_states = [state for state in all_states if state not in correct_states]
         new_df = pd.DataFrame(missing_states, columns=['states'])
         new_df.to_csv('states_with_you_dont_know.csv')
         break
